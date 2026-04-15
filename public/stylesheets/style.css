@@ -1,0 +1,65 @@
+body {
+    background: #0f0f0f;
+    color: white;
+    font-family: Arial;
+}
+
+.main {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.form-box {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #2a2a2a;
+    border: none;
+    color: white;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.task-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.task-card {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.read-btn {
+    background: #3b82f6;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.edit-btn {
+    background: orange;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.edit-box {
+    height: 200px;
+}

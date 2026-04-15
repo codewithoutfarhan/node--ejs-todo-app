@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit</title>
+    <link rel="stylesheet" href="/stylesheets/style.css?v=1">
+</head>
+<body>
+
+<div class="main">
+    <h2>Edit: <%= fileName %></h2>
+
+    <form action="/update/<%= fileName %>" method="POST">
+        <textarea name="details" class="edit-box"><%= data %></textarea>
+        <button>Save</button>
+    </form>
+
+    <a href="/file/<%= fileName %>">Cancel</a>
+</div>
+
+</body>
+</html>
