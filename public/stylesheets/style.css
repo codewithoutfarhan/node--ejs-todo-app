@@ -1,65 +1,103 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
 body {
     background: #0f0f0f;
     color: white;
-    font-family: Arial;
+    padding: 20px;
 }
 
+/* MAIN CONTAINER */
 .main {
-    width: 80%;
+    max-width: 900px;
     margin: auto;
-    margin-top: 40px;
 }
 
-.form-box {
-    background: #1c1c1c;
+/* FORM */
+form {
+    background: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 input, textarea {
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
     background: #2a2a2a;
-    border: none;
     color: white;
 }
 
+/* BUTTON */
 button {
-    background: #3b82f6;
-    color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
 }
 
-.task-grid {
-    display: flex;
+/* FILES GRID */
+.files {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    flex-wrap: wrap;
 }
 
-.task-card {
-    background: #1f1f1f;
+/* CARD */
+.card {
+    background: #1a1a1a;
     padding: 15px;
     border-radius: 10px;
-    width: 200px;
 }
 
-.read-btn {
-    background: #3b82f6;
-    padding: 5px 10px;
-    color: white;
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* ACTION BUTTONS */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    padding: 6px 10px;
+    border-radius: 5px;
     text-decoration: none;
+    color: white;
+    font-size: 14px;
 }
 
-.edit-btn {
+.read {
+    background: #007bff;
+}
+
+.edit {
     background: orange;
-    padding: 5px 10px;
-    color: white;
-    text-decoration: none;
-    margin-left: 5px;
 }
 
-.edit-box {
-    height: 200px;
+/* 🔥 MOBILE FIX */
+@media (max-width: 600px) {
+    .files {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
 }

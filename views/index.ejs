@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Todo</title>
-    <link rel="stylesheet" href="/stylesheets/style.css?v=1">
-</head>
-<body>
-
 <div class="main">
 
-    <div class="form-box">
-        <form action="/create" method="POST">
-            <input name="title" placeholder="Title..." required>
-            <textarea name="details" placeholder="Details..."></textarea>
-            <button>Create Task</button>
-        </form>
-    </div>
+<form method="POST" action="/create">
+    <input name="title" placeholder="Title..." required />
+    <textarea name="details" placeholder="Details..."></textarea>
+    <button>Create Task</button>
+</form>
 
-    <h2>Your Files:</h2>
+<h2>Your Files:</h2>
 
-    <div class="task-grid">
-        <% files.forEach(file => { %>
-            <div class="task-card">
-                <h3><%= file %></h3>
-                <a href="/file/<%= file %>" class="read-btn">Read</a>
-                <a href="/edit/<%= file %>" class="edit-btn">Edit</a>
+<div class="files">
+    <% files.forEach(file => { %>
+        <div class="card">
+            <h3><%= file %></h3>
+            <div class="actions">
+                <a class="read" href="/file/<%= file %>">Read</a>
+                <a class="edit" href="/edit/<%= file %>">Edit</a>
             </div>
-        <% }) %>
-    </div>
-
+        </div>
+    <% }) %>
 </div>
 
-</body>
-</html>
+</div>
