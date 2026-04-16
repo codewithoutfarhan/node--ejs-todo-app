@@ -1,23 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Farhan Todo App</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
 <div class="main">
 
-<form method="POST" action="/create">
-    <input name="title" placeholder="Title..." required />
-    <textarea name="details" placeholder="Details..."></textarea>
-    <button>Create Task</button>
-</form>
+    <form method="POST" action="/create">
+        <input name="title" placeholder="Title..." required />
+        <textarea name="details" placeholder="Details..."></textarea>
+        <button>Create Task</button>
+    </form>
 
-<h2>Your Files:</h2>
+    <h2>Your Files:</h2>
 
-<div class="files">
-    <% files.forEach(file => { %>
-        <div class="card">
-            <h3><%= file %></h3>
-            <div class="actions">
-                <a class="read" href="/file/<%= file %>">Read</a>
-                <a class="edit" href="/edit/<%= file %>">Edit</a>
+    <div class="files">
+        <% files.forEach(file => { %>
+            <div class="card">
+                <h3><%= file %></h3>
+                <div class="actions">
+                    <a class="read" href="/file/<%= file %>">Read</a>
+                    <a class="edit" href="/edit/<%= file %>">Edit</a>
+                </div>
             </div>
-        </div>
-    <% }) %>
-</div>
+        <% }) %>
+    </div>
 
 </div>
+
+</body>
+</html>
